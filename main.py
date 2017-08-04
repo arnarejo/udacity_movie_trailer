@@ -24,7 +24,7 @@ html_start = '''<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         .movies {
             margin: 10px;
@@ -69,7 +69,7 @@ def open_movies_page(movieList):
     for movie in movieList:
         print(movie.title)
 
-        html_inner += '<div class="box col-sm-6 col-md-4"><h2>'+movie.title+'</h2><p>IMDB Rating:'+str(movie.imdb_rating)+'</p><img src="'+movie.poster_url+'" alt=""><br><a href="'+movie.trailer_url+'" target="_blank"><button class="btn btn-primary">Click to Watch Trailer</button></a></div>'
+        html_inner += '<div class="box col-sm-6 col-md-4"><h5>'+movie.title+'</h5><p>IMDB Rating: '+str(movie.imdb_rating)+'</p><img src="'+movie.poster_url+'" alt=""><br><a href="'+movie.trailer_url+'" target="_blank"><button class="btn btn-primary">Click to Watch Trailer</button></a></div>'
 
     # combine dynamic html with rest of html to create complete html page
     html_final = html_start + html_inner + html_end
