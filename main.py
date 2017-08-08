@@ -67,8 +67,6 @@ def open_movies_page(movieList):
     # create dynamic html by iterating through the movies list
     html_inner = ''
     for movie in movieList:
-        print(movie.title)
-
         html_inner += '<div class="box col-sm-6 col-md-4"><h5>'+movie.title+'</h5><p>IMDB Rating: '+str(movie.imdb_rating)+'</p><img src="'+movie.poster_url+'" alt=""><br><a href="'+movie.trailer_url+'" target="_blank"><button class="btn btn-primary">Click to Watch Trailer</button></a></div>'
 
     # combine dynamic html with rest of html to create complete html page
