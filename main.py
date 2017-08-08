@@ -24,7 +24,7 @@ the_shawshank_redemption = movies.Movie(
     'The Shawshank Redemption',
     1994,
     9.3,
-    'https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg',
+    'https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg',  #noqa
     'https://www.youtube.com/watch?v=6hB3S9bIaco')
 finding_nemo = movies.Movie(
     'Finding Nemo',
@@ -39,7 +39,12 @@ badlapur = movies.Movie(
     'http://www.bollywoodirect.com/wp-content/uploads/2014/12/badlapur1.jpg',
     'https://www.youtube.com/watch?v=9KEoZanqlOE')
 # final movies_list contains all the movies database generated
-movies_list = [toy_story, gladiator, the_shawshank_redemption, finding_nemo, badlapur]
+movies_list = [
+    toy_story,
+    gladiator,
+    the_shawshank_redemption,
+    finding_nemo,
+    badlapur]
 
 html_start = '''<!DOCTYPE html>
 <html lang="en">
@@ -92,12 +97,12 @@ def open_movies_page(movieList):
     # create dynamic html by iterating through the movies list
     html_inner = ''
     for movie in movieList:
-        html_inner += '<div class="box col-sm-6 col-md-4"><h5>'+movie.title+'</h5><p>IMDB Rating: '+str(movie.imdb_rating)+'</p><img src="'+movie.poster_url+'" alt=""><br><a href="'+movie.trailer_url+'" target="_blank"><button class="btn btn-primary">Click to Watch Trailer</button></a></div>'
+        html_inner += '<div class="box col-sm-6 col-md-4"><h5>'+movie.title+'</h5><p>IMDB Rating: ' +str(movie.imdb_rating) +'</p><img src="'+movie.poster_url+'" alt=""><br><a href="'+movie.trailer_url+'" target="_blank"><button class="btn btn-primary">Click to Watch Trailer</button></a></div>'
 
     # combine dynamic html with rest of html to create complete html page
     html_final = html_start + html_inner + html_end
 
-    ## open, write and close html file
+    # open, write and close html file
     with open('sample.html', 'w') as f:
         f.write(html_final)
         f.close()
@@ -109,7 +114,7 @@ def open_movies_page(movieList):
     current_directory = os.getcwd()
 
     # set html file path
-    file_path = current_directory+ '/sample.html'
+    file_path = current_directory + '/sample.html'
 
     # MacOS Chrome Path
     chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
@@ -117,5 +122,5 @@ def open_movies_page(movieList):
     # open html file
     webbrowser.get(chrome_path).open_new_tab(file_path)
 
-# call open_movies_page function to dynamically generate html page and render it to users
+# call open_movies_page function
 open_movies_page(movies_list)
