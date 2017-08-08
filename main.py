@@ -8,11 +8,36 @@ import os
 import movies
 
 # create movies database
-toy_story = movies.Movie('Toy Story', 1995, 8.3, 'https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg', 'https://www.youtube.com/watch?v=KYz2wyBy3kc')
-gladiator = movies.Movie('Gladiator', 2000, 8.5, 'https://upload.wikimedia.org/wikipedia/en/8/8d/Gladiator_ver1.jpg', 'https://www.youtube.com/watch?v=owK1qxDselE')
-the_shawshank_redemption = movies.Movie('The Shawshank Redemption', 1994, 9.3, 'https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg', 'https://www.youtube.com/watch?v=6hB3S9bIaco')
-finding_nemo = movies.Movie('Finding Nemo', 2003, 8.1, 'https://upload.wikimedia.org/wikipedia/en/2/29/Finding_Nemo.jpg', 'https://www.youtube.com/watch?v=wZdpNglLbt8')
-badlapur = movies.Movie('Badlapur', 2015, 7.5, 'http://www.bollywoodirect.com/wp-content/uploads/2014/12/badlapur1.jpg', 'https://www.youtube.com/watch?v=9KEoZanqlOE')
+toy_story = movies.Movie(
+    'Toy Story',
+    1995,
+    8.3,
+    'https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg',
+    'https://www.youtube.com/watch?v=KYz2wyBy3kc')
+gladiator = movies.Movie(
+    'Gladiator',
+    2000,
+    8.5,
+    'https://upload.wikimedia.org/wikipedia/en/8/8d/Gladiator_ver1.jpg',
+    'https://www.youtube.com/watch?v=owK1qxDselE')
+the_shawshank_redemption = movies.Movie(
+    'The Shawshank Redemption',
+    1994,
+    9.3,
+    'https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg',
+    'https://www.youtube.com/watch?v=6hB3S9bIaco')
+finding_nemo = movies.Movie(
+    'Finding Nemo',
+    2003,
+    8.1,
+    'https://upload.wikimedia.org/wikipedia/en/2/29/Finding_Nemo.jpg',
+    'https://www.youtube.com/watch?v=wZdpNglLbt8')
+badlapur = movies.Movie(
+    'Badlapur',
+    2015,
+    7.5,
+    'http://www.bollywoodirect.com/wp-content/uploads/2014/12/badlapur1.jpg',
+    'https://www.youtube.com/watch?v=9KEoZanqlOE')
 # final movies_list contains all the movies database generated
 movies_list = [toy_story, gladiator, the_shawshank_redemption, finding_nemo, badlapur]
 
