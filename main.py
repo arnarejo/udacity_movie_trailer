@@ -51,7 +51,8 @@ html_start = '''<!DOCTYPE html>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,\
+initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -91,13 +92,22 @@ html_end = '''
 </body>
 </html>'''
 
+
 # create open_movies_age function
 def open_movies_page(movieList):
 
     # create dynamic html by iterating through the movies list
     html_inner = ''
     for movie in movieList:
-        html_inner += '<div class="box col-sm-6 col-md-4"><h5>'+movie.title+'</h5><p>IMDB Rating: ' +str(movie.imdb_rating) +'</p><img src="'+movie.poster_url+'" alt=""><br><a href="'+movie.trailer_url+'" target="_blank"><button class="btn btn-primary">Click to Watch Trailer</button></a></div>'
+        html_inner += '<div class="box col-sm-6 col-md-4"><h5>'\
+         + movie.title + '</h5><p>IMDB Rating: ' \
+         + str(movie.imdb_rating) \
+         + '</p><img src="' \
+         + movie.poster_url \
+         + '" alt=""><br><a href="' \
+         + movie.trailer_url \
+         + '" target="_blank"><button class="btn btn-primary">Click to Watch Trailer\
+         </button></a></div>'
 
     # combine dynamic html with rest of html to create complete html page
     html_final = html_start + html_inner + html_end
